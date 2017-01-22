@@ -6,7 +6,9 @@ var index = require('./routes/index.js');
 var mongo = require("mongodb").MongoClient;
 
 var app = express();
-require("dotenv").config();
+require('dotenv').config({
+  silent: true
+});
 var url1 = process.env.MONGOLAB_URI;
 mongo.connect(url1 , function(err, db) {
 
