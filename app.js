@@ -13,7 +13,7 @@ mongo.connect(url1 , function(err, db) {
   if (err) {
     throw new Error('Database failed to connect!');
   } else {
-    console.log('Successfully connected to MongoDB on port 27017.');
+    console.log('Successfully connected to MongoDB.');
   }
 
   // The format follows as, alias to use for real path, also allows permission to such path.
@@ -53,5 +53,6 @@ app.use(function(err, req, res, next) {
 });
 
 });
+
 
 module.exports = app;
