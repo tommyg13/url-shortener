@@ -1,6 +1,6 @@
 module.exports=function(app,db){
     app.get("/:url",function(req,res){
-    var url =  process.env.URL + req.params.url;
+    var url =  "https://url-gkazikas.c9users.io/" + req.params.url;
     shorten(url,db,res);
   });
   
