@@ -1,6 +1,6 @@
 module.exports=function(app,db){
     app.get("/:url",function(req,res){
-    var url =  "https://url-gkazikas.c9users.io/" + req.params.url;
+    var url =  process.env.URL + req.params.url;
     shorten(url,db,res);
   });
   
@@ -46,7 +46,7 @@ module.exports=function(app,db){
       
     }
     else {
-     res.send("erro: url not in database,please check again the url");
+     res.send("error: url not in database,please check again the url");
     }
   });
   }

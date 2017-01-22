@@ -7,7 +7,7 @@ var mongo = require("mongodb").MongoClient;
 
 var app = express();
 require("dotenv").config();
-var url1 = "mongodb://tommy13:gate13@ds117869.mlab.com:17869/api_projects";
+var url1 = process.env.MONGOLAB_URI;
 mongo.connect(url1 , function(err, db) {
 
   if (err) {
